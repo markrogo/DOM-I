@@ -43,6 +43,7 @@ const siteContent = {
 //rebuild navbar
 let navNL = document.querySelectorAll('nav a');
 
+// is there a different way to do this??
 let anchors = Object.values(siteContent.nav);
 anchors.pop();
 
@@ -52,27 +53,32 @@ for (i=0; i < anchors.length; i++) {
   navNL[i].style.color = 'green';
 };
 
-// can we have an index in our for each??
-// anchors.forEach(e => { 
-//   navNL[e].textContent = anchors[e];
-// });
+//prepend and append new items to nav
+const rearAnchor = document.createElement('a');
+rearAnchor.textContent = "Last";
+rearAnchor.style.color = "red";
+
+const frontAnchor = document.createElement('a');
+frontAnchor.textContent = "First";
+frontAnchor.style.color = "blue";
 
 
-// here's where we select the nave and then prepend and append
+const navAll = document.querySelector('nav');
 
-// thus isnt code yet document.prependChild()
+navAll.prepend(frontAnchor);
+navAll.appendChild(rearAnchor);
 
 
+// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // rebuild middle secion
 const head = document.querySelector('h1');
 let newH1Str = (siteContent["cta"]["h1"]);
+let h1array = newH1Str.split(" ");
+head.innerHTML = h1array[0] + "<br />" + h1array[1] + "<br />" + h1array[2];
 
-
-
-head.textContent = (newH1Str);
 
 let buttonText = document.querySelector('.cta button');
 buttonText.textContent = (siteContent["cta"]["button"]);
@@ -105,6 +111,7 @@ midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 //rebuild contact section and footer
 
 let contactStuff = Object.values(siteContent["contact"]);
+console.log (contactStuff);
 
 const contactHead = document.querySelector(".contact h4");
 contactHead.textContent = (contactStuff[0]);
@@ -112,10 +119,33 @@ contactStuff.shift();
 
 let contactNL = document.querySelectorAll(".contact p");
 
+contactFirst = contactStuff[0].substring(0, contactStuff[0].indexOf("Somewhere"));
+console.log (contactFirst);
+contactSecond = contactStuff[0].substring(contactStuff[0].indexOf("Somewhere"), contactStuff[0].length);
+console.log (contactSecond);
+
+
+console.log (contactStuff);
+
 for (i=0; i <contactStuff.length; i++) {
   contactNL[i].textContent = contactStuff[i];
+  // console.log (contactNL[i]);
 }
+contactNL[0].innerHTML = contactFirst + "<br />" + contactSecond;
 
 
 const footText = document.querySelector("footer");
 footText.textContent = (siteContent["footer"]["copyright"]);
+
+
+
+// restyle nav -- COMMENT THIS OUT TO GET THE CLONE
+navAll.style.backgroundColor = 'lightgrey';
+navAll.style.padding = '2%';
+head.style.color = "blue";
+let direction = document.querySelector('.cta');
+direction.style.backgroundColor = 'pink';
+direction.style.flexDirection = 'row-reverse';
+const miniHeads = document.querySelectorAll('h4');
+miniHeads.forEach ((element) => {
+  element.style.color = 'red';});
