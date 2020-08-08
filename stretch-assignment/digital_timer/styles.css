@@ -1,4 +1,4 @@
-body {
+.digits {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,9 +6,31 @@ body {
 
 .digit {
   display: inline-block;
-  font-size: 80px;
+  
+  font-size: 150px;
+  font-family: 'Major Mono Display', monospace;
 }
 
 .redDigit {
   color: red;
+}
+
+.normal {
+  display:flex;
+    justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-size: 2.2rem;
+  margin: 0.5rem;
+  background-color: lightgrey;
+}
+
+#start {
+  background-color: lightgreen;
+}
+
+#stop {
+  background-color: lightpink;
 }

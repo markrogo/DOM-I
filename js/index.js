@@ -140,12 +140,12 @@ footText.textContent = (siteContent["footer"]["copyright"]);
 
 
 // restyle nav -- COMMENT THIS OUT TO GET THE CLONE
-navAll.style.backgroundColor = 'lightgrey';
-navAll.style.padding = '2%';
-head.style.color = "blue";
-let direction = document.querySelector('.cta');
-direction.style.backgroundColor = 'pink';
-direction.style.flexDirection = 'row-reverse';
-const miniHeads = document.querySelectorAll('h4');
-miniHeads.forEach ((element) => {
-  element.style.color = 'red';});
+// navAll.style.backgroundColor = 'lightgrey';
+// navAll.style.padding = '2%';
+// head.style.color = "blue";
+// let direction = document.querySelector('.cta');
+// direction.style.backgroundColor = 'pink';
+// direction.style.flexDirection = 'row-reverse';
+// const miniHeads = document.querySelectorAll('h4');
+// miniHeads.forEach ((element) => {
+//   element.style.color = 'red';});
