@@ -9,6 +9,8 @@
   
   font-size: 150px;
   font-family: 'Major Mono Display', monospace;
+  border: 1px solid black;
+  background-color: linen;
 }
 
 .redDigit {
