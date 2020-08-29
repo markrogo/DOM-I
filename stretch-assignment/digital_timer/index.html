@@ -1,16 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
+<meta charset="UTF-8">
+
 <html>
   <head>
     <title>DOM I</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+   
   </head>
   <body>
+    
     <div class="digits">
-      <div class="digit" id="secondTens">-</div>
-      <div class="digit" id="secondOnes">-</div>
+      <div class="digit" id="secondTens">0</div>
+      <div class="digit" id="secondOnes">0</div>
       <div class="digit" id="colon">:</div>
-      <div class="digit" id="msHundreds">-</div>
-      <div class="digit" id="msTens">-</div>
+      <div class="digit" id="msHundreds">0</div>
+      <div class="digit" id="msTens">0</div>
+    </div>
+    <br>
+    <div class = "normal">
+     
+      <button id="start" onclick = "startTimer()" >START TIMER</button>    
+      <button onclick = "stop()" id = 'stop'>STOP TIMER</button>
+      <button id="reset" onclick ="reset()">RESET TIMER</button>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>
